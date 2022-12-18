@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "single.responsibility.principle", "single.responsibility.principle\single.responsibility.principle.csproj", "{C6695DD1-559A-4F56-9091-D6953D55922D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "open.closed.principle", "open.closed.principle\open.closed.principle.csproj", "{5CAF5D73-B77F-4368-91C8-6280F5D3E8A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6695DD1-559A-4F56-9091-D6953D55922D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6695DD1-559A-4F56-9091-D6953D55922D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6695DD1-559A-4F56-9091-D6953D55922D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6695DD1-559A-4F56-9091-D6953D55922D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAF5D73-B77F-4368-91C8-6280F5D3E8A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAF5D73-B77F-4368-91C8-6280F5D3E8A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAF5D73-B77F-4368-91C8-6280F5D3E8A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAF5D73-B77F-4368-91C8-6280F5D3E8A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
