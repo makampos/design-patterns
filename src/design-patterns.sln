@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "open.closed.principle", "op
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lizkov.substitution", "lizkov.substitution\lizkov.substitution.csproj", "{C0B0465B-B3B8-4F53-8812-B8A870A1EF69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interface.segregation.principle", "interface.segregation.principle\interface.segregation.principle.csproj", "{2891B73E-C529-4D1F-837D-185240B5FF5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{C0B0465B-B3B8-4F53-8812-B8A870A1EF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B0465B-B3B8-4F53-8812-B8A870A1EF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B0465B-B3B8-4F53-8812-B8A870A1EF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2891B73E-C529-4D1F-837D-185240B5FF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2891B73E-C529-4D1F-837D-185240B5FF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2891B73E-C529-4D1F-837D-185240B5FF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2891B73E-C529-4D1F-837D-185240B5FF5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
