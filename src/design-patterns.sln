@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interface.segregation.princ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dependency.inversion.principle", "dependency.inversion.principle\dependency.inversion.principle.csproj", "{F6605830-5A29-4AAE-871F-A4F2E294B1A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "builder", "builder\builder.csproj", "{3A6B9EC5-285C-4871-ADE7-56EA428F6539}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{F6605830-5A29-4AAE-871F-A4F2E294B1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6605830-5A29-4AAE-871F-A4F2E294B1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6605830-5A29-4AAE-871F-A4F2E294B1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6B9EC5-285C-4871-ADE7-56EA428F6539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6B9EC5-285C-4871-ADE7-56EA428F6539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6B9EC5-285C-4871-ADE7-56EA428F6539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6B9EC5-285C-4871-ADE7-56EA428F6539}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
