@@ -1,5 +1,7 @@
 using System.Text;
 
+namespace builder.Builder;
+
 public class HtmlElement
 {
     public string Name, Text;

@@ -1,3 +1,5 @@
+namespace builder.Builder;
+
 public class HtmlBuilder
 {
     private readonly string rootName;
@@ -9,10 +11,11 @@ public class HtmlBuilder
         root.Name = this.rootName;
     }
 
-    public void AddChild(string childName, string childText)
+    public HtmlBuilder AddChild(string childName, string childText)
     {
         var e = new HtmlElement(childName, childText);
         root.Elements.Add(e);
+        return this;
     }
 
     public override string ToString()
