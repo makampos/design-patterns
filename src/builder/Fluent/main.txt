@@ -1,0 +1,5 @@
+var me = Person.New
+            .Called("Matheus")
+            .WorksAsA("Developer")
+            .Build();
+        Console.WriteLine(me);
