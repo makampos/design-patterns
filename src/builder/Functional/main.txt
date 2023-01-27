@@ -1,0 +1,5 @@
+var person = new PersonBuilder()
+            .Called("John")
+            .WorksAs("Programmer")
+            .Build();
+        Console.WriteLine(person);
