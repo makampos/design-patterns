@@ -1,0 +1,5 @@
+var car = CarBuilder.Create()
+            .OfType(CarType.Crossover)
+            .WithWheels(18)
+            .Build();
+        Console.Write(car);
