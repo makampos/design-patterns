@@ -1,0 +1,5 @@
+var pb = new PersonBuilder();
+        Person person = pb
+            .lives.At($"47, Main Street").In("London").WithPostcode("CV7 1NM")
+            .works.At("Google").AsA($"Engineer").Earning(129000);
+        Console.WriteLine(person);
