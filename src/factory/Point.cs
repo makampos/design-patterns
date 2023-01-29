@@ -3,27 +3,35 @@ namespace factory;
 public class Point
 {
     private double x, y;
-    /// <summary>
-    /// Initializes a new instance of the <see cref="Point"/> class.
-    /// </summary>
-    /// <param name="a"></param>
-    /// <param name="b"></param>
-    /// <param name="system"></param>
-    /// <exception cref="ArgumentOutOfRangeException"></exception>
-    public Point(double a, double b, CordinateSystem system = CordinateSystem.Cartesian)
+
+    private Point(double x, double y)
     {
-        switch (system)
-        {
-            case  CordinateSystem.Cartesian:
-                x = a;
-                y = b;
-                break;
-            case CordinateSystem.Polar:
-                x = a * Math.Cos(b);
-                y = a * Math.Sin(b);
-                break;
-            default:             
-                throw new ArgumentOutOfRangeException(nameof(system), system, null);
-        }
+        this.x = x;
+        this.y = y;
+ 
     }
+
+    public override string ToString()
+    {
+        return $"{nameof(x)}: {x}, {nameof(y)}: {y}$";
+    }
+
+
+    /// <summary>
+    /// Factory method for creating points with a given polar cordinate system
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <returns></returns>
+    public static Point NewCartesianPoint(double x, double y)
+    {
+        return new Point(x, y);
+    }
+
+    public static Point NewPolarPoint(double rho, double theta)
+    {
+        return new Point(rho * Math.Cos(theta), rho * Math.Sin(theta));
+    }
+
+   
 }
