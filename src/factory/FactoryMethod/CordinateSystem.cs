@@ -1,4 +1,4 @@
-namespace factory;
+namespace factory.FactoryMethod;
 
 public enum CordinateSystem 
 {
