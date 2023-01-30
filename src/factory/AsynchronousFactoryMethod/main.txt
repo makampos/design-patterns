@@ -1,0 +1,1 @@
+Foo someThingAsync = await Foo.CreateAsync();
