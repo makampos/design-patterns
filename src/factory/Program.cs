@@ -1,4 +1,6 @@
-﻿namespace factory;
+﻿using factory.FactoryMethod;
+
+namespace factory;
 
 public class Program
 {
