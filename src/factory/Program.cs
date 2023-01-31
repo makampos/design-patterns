@@ -1,5 +1,4 @@
-﻿using factory.ObjectTrackingAndBulkReplacement;
-namespace factory;
+﻿namespace factory;
 
 public class Program
 {
