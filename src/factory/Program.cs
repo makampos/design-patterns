@@ -1,4 +1,6 @@
-﻿namespace factory;
+﻿using factory.AbstractFactory;
+
+namespace factory;
 
 public class Program
 {

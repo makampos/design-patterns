@@ -1,0 +1,4 @@
+var machine = new HotDrinkMachine();
+        var drink = machine.MakeDrink(AvailableDrink.Tea, 100);
+        drink.Consume();
+        Console.WriteLine(drink);
