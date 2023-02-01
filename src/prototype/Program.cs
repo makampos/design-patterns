@@ -6,8 +6,8 @@ public class Program
     {
         var jhon = new Person(new [] {$"Jhon", $"Smith"},
             new Address("London Road", 123));
-        var jane = (Person)jhon.Clone();
-        jane.Address = new Address("Paris Road", 321);
+        var jane = new Person(jhon);
+        jane.Address.HouseNumber = 155;
         
         Console.WriteLine(jhon);
         Console.WriteLine(jane);
