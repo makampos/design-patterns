@@ -1,25 +1,16 @@
-﻿using prototype.BetterSolution;
+﻿using prototype.OldSolution;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        var jhon = new Employee();
-           jhon.Names = new[] {"Jhon", "Smith"};
-           jhon.Address = new Address
-           {
-               HouseNumber = 123,
-               StreetName = "Ernani do Amaral"
-           };
-           
-           jhon.Salary = 124000;
-           var copy = jhon.DeepCopy();
-           
-          copy.Names[1] = "Barga";
-          copy.Address.HouseNumber++;
-          copy.Salary = 200000;
+        var jhon = new Person(new [] {$"Jhon", $"Smith"},
+            new Address("London Road", 123));
+        var jane = jhon.DeepCopy();
+        jane.Names[0] = "JaneR";
+        jane.Address.HouseNumber = 155;
         
-          Console.WriteLine(jhon);
-          Console.WriteLine(copy);
+        Console.WriteLine(jhon);
+        Console.WriteLine(jane);
     }
 }

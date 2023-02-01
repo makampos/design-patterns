@@ -1,8 +1,7 @@
-using prototype.OldSolution;
+namespace prototype.OldSolution;
 
-namespace prototype;
-
-public class Person : IPrototype<Person>
+[Serializable]
+public class Person 
 {
     public string[] Names;
     public Address Address;
@@ -15,10 +14,6 @@ public class Person : IPrototype<Person>
     {
         Names = names ?? throw new ArgumentNullException(nameof(names));
         Address = address ?? throw new ArgumentNullException(nameof(address));
-    }
-    public Person DeepCopy()
-    {
-        return new Person(Names, new Address(Address.DeepCopy()));
     }
     public override string ToString()
     {

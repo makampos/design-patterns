@@ -1,7 +1,0 @@
- var jhon = new Person(new [] {$"Jhon", $"Smith"},
-            new Address("London Road", 123));
-        var jane = jhon.DeepCopy();
-        jane.Address.HouseNumber = 155;
-        
-        Console.WriteLine(jhon);
-        Console.WriteLine(jane);

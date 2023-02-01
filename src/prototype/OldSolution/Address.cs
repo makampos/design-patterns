@@ -1,6 +1,7 @@
 namespace prototype.OldSolution;
 
-public class Address : IPrototype<Address>
+[Serializable]
+public class Address
 {
     public string StreetName;
     public int HouseNumber;
@@ -14,12 +15,6 @@ public class Address : IPrototype<Address>
         StreetName = streetName ?? throw new ArgumentNullException(nameof(streetName));
         HouseNumber = houseNumber;
     }
-
-    public Address DeepCopy()
-    {
-        return new Address(StreetName, HouseNumber);
-    }
-
     public override string ToString()
     {
         return $"{nameof(StreetName)}: {StreetName}, {nameof(HouseNumber)}: {HouseNumber}";
