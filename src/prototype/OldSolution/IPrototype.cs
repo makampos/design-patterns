@@ -1,4 +1,4 @@
-namespace prototype;
+namespace prototype.OldSolution;
 
 public interface IPrototype<T>
 {

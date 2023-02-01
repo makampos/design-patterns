@@ -1,27 +1,26 @@
-namespace prototype;
+namespace prototype.BetterSolution;
 
-public class Address : IPrototype<Address>
+public class Address : IDeepCopyable<Address>
 {
     public string StreetName;
     public int HouseNumber;
-    public Address(Address other)
+
+    public Address()
     {
-        StreetName = other.StreetName;
-        HouseNumber = other.HouseNumber;
+        
     }
     public Address(string streetName, int houseNumber)
     {
-        StreetName = streetName ?? throw new ArgumentNullException(nameof(streetName));
+        StreetName = streetName;
         HouseNumber = houseNumber;
     }
-
     public Address DeepCopy()
     {
-        return new Address(StreetName, HouseNumber);
+        return (Address)MemberwiseClone();
     }
-
     public override string ToString()
     {
         return $"{nameof(StreetName)}: {StreetName}, {nameof(HouseNumber)}: {HouseNumber}";
     }
+    
 }

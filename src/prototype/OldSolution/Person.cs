@@ -1,3 +1,5 @@
+using prototype.OldSolution;
+
 namespace prototype;
 
 public class Person : IPrototype<Person>
