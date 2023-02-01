@@ -6,7 +6,7 @@ public class Program
     {
         var jhon = new Person(new [] {$"Jhon", $"Smith"},
             new Address("London Road", 123));
-        var jane = new Person(jhon);
+        var jane = jhon.DeepCopy();
         jane.Address.HouseNumber = 155;
         
         Console.WriteLine(jhon);
