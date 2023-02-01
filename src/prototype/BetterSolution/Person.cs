@@ -15,9 +15,11 @@ public class Person : IDeepCopyable<Person>
         Address = address;
     }
 
-    public Person DeepCopy()
+    public void CopyTo(Person target)
     {
-        return new Person((string[])Names.Clone(), Address.DeepCopy());
+        target.Names = (string[])Names.Clone();
+        // target.Address = ((IDeepCopyable<Address>)Address).DeepCopy();
+        target.Address = Address.DeepCopy();
     }
 
     public override string ToString()

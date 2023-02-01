@@ -11,14 +11,15 @@ public class Program
                HouseNumber = 123,
                StreetName = "Ernani do Amaral"
            };
+           
            jhon.Salary = 124000;
-
            var copy = jhon.DeepCopy();
-              copy.Names[1] = "Thompson";
-              copy.Address.HouseNumber++;
-              copy.Salary = 200000;
-            
-              Console.WriteLine(jhon);
-              Console.WriteLine(copy);
+           
+          copy.Names[1] = "Barga";
+          copy.Address.HouseNumber++;
+          copy.Salary = 200000;
+        
+          Console.WriteLine(jhon);
+          Console.WriteLine(copy);
     }
 }

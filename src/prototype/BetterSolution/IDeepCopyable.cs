@@ -1,6 +1,13 @@
 namespace prototype.BetterSolution;
 
 public interface IDeepCopyable<T>
+    where T : new()
 {
-    T DeepCopy();
+    void CopyTo(T target);
+    public T DeepCopy()
+    {
+        T t = new T();
+        CopyTo(t);
+        return t;
+    }
 }

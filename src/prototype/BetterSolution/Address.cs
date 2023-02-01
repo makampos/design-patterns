@@ -14,10 +14,13 @@ public class Address : IDeepCopyable<Address>
         StreetName = streetName;
         HouseNumber = houseNumber;
     }
-    public Address DeepCopy()
+
+    public void CopyTo(Address target)
     {
-        return (Address)MemberwiseClone();
+        target.StreetName = StreetName;
+        target.HouseNumber = HouseNumber;
     }
+   
     public override string ToString()
     {
         return $"{nameof(StreetName)}: {StreetName}, {nameof(HouseNumber)}: {HouseNumber}";

@@ -8,14 +8,14 @@ public class Employee : Person, IDeepCopyable<Employee>
     {
         
     }
-    public Employee(string[] names, Address address,int salary) :base(names,address)
+    public Employee(string[] names, Address address, int salary) :base(names,address)
     {
         Salary = salary;
     }
-
-    public Employee DeepCopy()
+    public void CopyTo(Employee target)
     {
-        return new Employee((string[])Names.Clone(), Address.DeepCopy(), Salary);
+        base.CopyTo(target); 
+        target.Salary = Salary;
     }
 
     public override string ToString()
