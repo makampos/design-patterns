@@ -1,10 +1,14 @@
 namespace prototype.OldSolution;
 
-[Serializable]
 public class Person 
 {
     public string[] Names;
     public Address Address;
+
+    public Person()
+    {
+        
+    }
     public Person(Person other)
     {
         Names = other.Names;

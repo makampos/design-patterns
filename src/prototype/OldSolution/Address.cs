@@ -1,10 +1,13 @@
 namespace prototype.OldSolution;
-
-[Serializable]
 public class Address
 {
     public string StreetName;
     public int HouseNumber;
+
+    public Address()
+    {
+        
+    }
     public Address(Address other)
     {
         StreetName = other.StreetName;

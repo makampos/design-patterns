@@ -6,7 +6,7 @@ public class Program
     {
         var jhon = new Person(new [] {$"Jhon", $"Smith"},
             new Address("London Road", 123));
-        var jane = jhon.DeepCopy();
+        var jane = jhon.DeepCopyXml();
         jane.Names[0] = "JaneR";
         jane.Address.HouseNumber = 155;
         

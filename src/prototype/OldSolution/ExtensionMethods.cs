@@ -1,4 +1,5 @@
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 
 namespace prototype.OldSolution;
 
@@ -13,5 +14,16 @@ public static class ExtensionMethods
         object copy = formatter.Deserialize(stream);
         stream.Close();
         return (T)copy;
+    }
+
+    public static T DeepCopyXml<T>(this T self)
+    {
+        using(var memoryStream = new MemoryStream())
+        {
+            var s = new XmlSerializer(typeof(T));
+            s.Serialize(memoryStream, self);
+            memoryStream.Position = 0;
+            return (T)s.Deserialize(memoryStream);
+        }
     }
 }
