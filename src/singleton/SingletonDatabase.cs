@@ -6,8 +6,11 @@ using static System.Console;
 public class SingletonDatabase : IDatabase
 {
     private Dictionary<string, int> capitals;
+    private static int _instanceCount; // = 0;
+    public static int Count => _instanceCount;
     private SingletonDatabase()
     {
+        _instanceCount++;
         WriteLine("Initializing database (...)");
         capitals = File.ReadAllLines($"capitals.txt")
             .Batch(2)

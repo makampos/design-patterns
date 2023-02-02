@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prototype", "prototype\prot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton", "singleton\singleton.csproj", "{71EB30A4-3816-4E03-9D2A-A755A4323191}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "singleton.tests", "singleton.tests\singleton.tests.csproj", "{3AEB35CD-1C80-4400-9022-9D47DF25E7E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{71EB30A4-3816-4E03-9D2A-A755A4323191}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71EB30A4-3816-4E03-9D2A-A755A4323191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71EB30A4-3816-4E03-9D2A-A755A4323191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEB35CD-1C80-4400-9022-9D47DF25E7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEB35CD-1C80-4400-9022-9D47DF25E7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEB35CD-1C80-4400-9022-9D47DF25E7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEB35CD-1C80-4400-9022-9D47DF25E7E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
