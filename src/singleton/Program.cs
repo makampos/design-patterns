@@ -1,20 +1,27 @@
-﻿using singleton.PerThreadSingleton;
+﻿using singleton.AmbientContext;
 
-public static class Program
+namespace singleton;
+
+public class Program
 {
     public static void Main(string[] args)
     {
-        var t1 = Task.Factory.StartNew(() =>
-        {
-            Console.WriteLine("T1" + PerThreadSingleton.Instance.Id);
-        });
+        var house = new Building();
 
-        var t2 = Task.Factory.StartNew(() =>
+        using (new BuildingContext(3333))
         {
-            Console.WriteLine("T2" + PerThreadSingleton.Instance.Id);
-            Console.WriteLine("T3" + PerThreadSingleton.Instance.Id);
-        });
+            house._walls.Add(new Wall(new Point(0, 0), new Point(1233, 0)));
+            house._walls.Add(new Wall(new Point(0, 0), new Point(100, 0)));
+        }
+        using (new BuildingContext(8000))
+        {
+            house._walls.Add(new Wall(new Point(0, 0), new Point(9999, 0)));
+            house._walls.Add(new Wall(new Point(0, 0), new Point(0, 0)));
+        }
 
-        Task.WaitAll(t1, t2);
+        using (new BuildingContext(2890))
+        {
+            house._walls.Add(new Wall(new Point(600, 0), new Point(9999, 0)));
+        }
     }
 }
