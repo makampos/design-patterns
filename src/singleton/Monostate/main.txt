@@ -1,0 +1,6 @@
+var ceo = new CEO();
+        ceo.Name = "Adam Smith";
+        ceo.Age = 55;
+        
+        var ceo2 = new CEO();
+        WriteLine(ceo2);

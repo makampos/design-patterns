@@ -1,15 +1,20 @@
-﻿using singleton.Monostate;
-using static System.Console;
+﻿using singleton.PerThreadSingleton;
 
 public static class Program
 {
     public static void Main(string[] args)
     {
-        var ceo = new CEO();
-        ceo.Name = "Adam Smith";
-        ceo.Age = 55;
-        
-        var ceo2 = new CEO();
-        WriteLine(ceo2);
+        var t1 = Task.Factory.StartNew(() =>
+        {
+            Console.WriteLine("T1" + PerThreadSingleton.Instance.Id);
+        });
+
+        var t2 = Task.Factory.StartNew(() =>
+        {
+            Console.WriteLine("T2" + PerThreadSingleton.Instance.Id);
+            Console.WriteLine("T3" + PerThreadSingleton.Instance.Id);
+        });
+
+        Task.WaitAll(t1, t2);
     }
 }
