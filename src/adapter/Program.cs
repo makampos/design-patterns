@@ -55,6 +55,8 @@ public class Program
     public class LineToPointAdapter : Collection<Point>
     {
         private static int count;
+        static Dictionary<int, List<Point>> cache = 
+            new Dictionary<int, List<Point>>();
         public LineToPointAdapter(Line line)
         {
             Console.WriteLine($"{++count}: Generating points for line [{line.start.x},{line.start.y}]-[{line.end.x},{line.end.y}]");
