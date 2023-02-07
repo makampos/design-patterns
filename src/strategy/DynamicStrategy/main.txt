@@ -1,0 +1,10 @@
+var tp = new TextProcessor();
+            tp.SetOutPutFormat(OutputFormat.Markdown);
+            tp.AppendList(new[] {"foo", "bar", "baz"});
+            Console.WriteLine(tp);
+
+            tp.Clear();
+        
+            tp.SetOutPutFormat(OutputFormat.Html);
+            tp.AppendList(new[] {"foo", "bar", "baz"});
+            Console.WriteLine(tp);
