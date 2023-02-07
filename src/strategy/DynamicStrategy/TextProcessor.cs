@@ -1,26 +1,11 @@
 using System.Text;
 namespace strategy.DynamicStrategy
 {
-    public class TextProcessor
+    public class TextProcessor<LS> where LS : IlistStrategy, new()
     {
         private readonly StringBuilder _sb = new StringBuilder();
-        private IlistStrategy _listStrategy;
+        private IlistStrategy _listStrategy = new LS();
 
-        public void SetOutPutFormat(OutputFormat format)
-        {
-            switch (format)
-            {
-                case OutputFormat.Markdown:
-                    _listStrategy = new MarkdownListStrategy();
-                    break;
-                case OutputFormat.Html:
-                    _listStrategy = new HtmlListStrategy();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(format), format, null);
-            }
-        }
-        
         public void AppendList(IEnumerable<string> items)
         {
             _listStrategy.Start(_sb);
